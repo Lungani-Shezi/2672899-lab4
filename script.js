@@ -2,7 +2,7 @@ const button = document.getElementById("search-btn");
 const img = document.getElementById("flag");
 const spin  = document.getElementById("loading-spinner");
 const grid  = document.getElementById("border-grid");
-const errorMessage = document.getElementById(error-message);
+const errorMessage = document.getElementById("error-message");
 
 spin.hidden = true;
 
