@@ -34,7 +34,7 @@ const fetchCountry = async () => {
                 const borderData = await borderResponse.json();
                 const borderCountry = borderData[0];
 
-                borderingCountries.innerHTML += `<p>${borderCountry.name.common}</p> <img src="${borderCountry.flags.svg}" width = "50">`
+                borderingCountries.innerHTML += `<p>${borderCountry.name.common}</p> <img src="${borderCountry.flags.svg}" width = "100">`
             }
         }
     }

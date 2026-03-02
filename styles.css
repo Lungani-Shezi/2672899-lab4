@@ -28,7 +28,7 @@
     /* Additional layout properties */
     background: lightblue;
     gap: 10px;
-    max-width: 600px;
+    max-width: auto;
     margin: 20px auto;
 }
 
