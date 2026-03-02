@@ -24,14 +24,12 @@
 }
 
 .border-grid {
-    display: grid; /* or display: flex */
+    display: flex; /* or display: flex */
     /* Additional layout properties */
     background: lightblue;
     gap: 10px;
     max-width: 600px;
     margin: 20px auto;
-    height: auto;
-    width: auto;
 }
 
 .error {
