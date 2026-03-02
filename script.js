@@ -2,6 +2,7 @@ const button = document.getElementById("search-btn");
 const img = document.getElementById("flag");
 const spin  = document.getElementById("loading-spinner");
 const grid  = document.getElementById("border-grid");
+const errorMessage = document.getElementById(error-message);
 
 spin.hidden = true;
 
@@ -14,7 +15,7 @@ const fetchCountry = async () => {
         const response = await fetch(url);
 
         if (!response.ok){
-            throw new Error("Cant fetch data");
+            throw new Error("Country not found.");
         }
 
         const data = await response.json();
@@ -39,10 +40,15 @@ const fetchCountry = async () => {
         }
     }
     catch(error){
-        console.error(error);
+        showError(error.message);
     }finally{
         spin.hidden =true;
     }
+}
+
+function showError(message){
+    errorMessage.textContent = message;
+    errorMessage.classList.remove("hidden");
 }
 
 button.addEventListener("click",fetchCountry)
